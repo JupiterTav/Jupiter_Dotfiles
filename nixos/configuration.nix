@@ -72,7 +72,6 @@
      firefox
      kitty
      git
-     neofetch
      waybar
      swww
      rofi-wayland

@@ -25,7 +25,9 @@
     "Xcursor.size" = 16;
     "Xft.dpi" = 172;
   };
-
+	import = [
+		../modules/default.nix
+	];
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     # here is some command line tools I use frequently
@@ -95,14 +97,7 @@
     fira-code
   ];
 
-  # basic configuration of git, please change to your own
-  programs.git = {
-    enable = true;
-    userName = "JupiterTav";
-    userEmail = "wesleyTavaresDev@outlook.com";
-  };
-
-  # starship - an customizable prompt for any shell
+	  # starship - an customizable prompt for any shell
   programs.starship = {
     enable = true;
     # custom settings
