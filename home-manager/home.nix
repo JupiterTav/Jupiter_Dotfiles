@@ -58,7 +58,6 @@
     ipcalc  # it is a calculator for the IPv4/v6 addresses
 
     # misc
-    cowsay
     file
     which
     tree
@@ -74,8 +73,6 @@
     # with more details log output
     nix-output-monitor
 
-    # productivity
-    hugo # static site generator
     glow # markdown previewer in terminal
 
     btop  # replacement of htop/nmon
