@@ -67,15 +67,6 @@
       line_break.disabled = true;
     };
   };
-
-  programs.kitty = {
-    enable = true;
-    # custom settings
-    font.size = 12;
-    font.name = "Fira Code Nerd Font";
-      shellIntegration.enableFishIntegration = true;
-  };
-
   programs.fish = {
     enable = true;
     generateCompletions = true;
