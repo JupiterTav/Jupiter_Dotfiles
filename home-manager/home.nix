@@ -56,11 +56,6 @@
     fira-code
   ];
 
-   # starship - an customizable prompt for any shell
-  programs.fish = {
-    enable = true;
-    generateCompletions = true;
-  };
 
   # changes in each release.
   home.stateVersion = "24.11";

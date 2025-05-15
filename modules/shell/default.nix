@@ -14,14 +14,14 @@
     				jeffreytse/zsh-vi-mode
 				mattmc3/ez-compinit
 				zdharma-continuum/fast-syntax-highlighting kind:defer
+				sindresorhus/pure     kind:fpath
 				''];
 			useFriendlyNames = true;
 		};
-		
-		initContent = lib.mkOrder 500 '''
-			eval "$(starship init zsh)"
-		''';
-	};
-
-	
+		initExtra = ''
+			autoload -Uz promptinit && promptinit 
+			zstyle :prompt:pure:git:stash show yes
+			prompt pure
+		'';
+	};	
 }
