@@ -9,7 +9,8 @@
 		environment = {
 			"LS_COLORS" = "1";
 		};
-
+		
+			themeFile = "GruvboxMaterialDarkSoft";
 		settings = {
 
 			#keyboard latency
