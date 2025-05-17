@@ -5,5 +5,6 @@
 		./git
 		./kitty
 		./shell
+                ./nvf
 	];
 }

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   home.username = "jupiter_euler";
@@ -9,24 +9,23 @@
   };
 	imports = [
 		../modules/default.nix
-	];
+
+    inputs.nvf.homeManagerModules.default
+];
   home.packages = with pkgs; [
 
     neofetch
     nnn # terminal file manager
 
     obsidian
-    # archives
     zip
-    unzip
-
+    unzip 
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
     eza # A modern replacement for ‘ls’
     fzf # A command-line fuzzy finder
     bat
-
     # misc
     file
     which
@@ -38,27 +37,13 @@
     gnupg
 
     nix-output-monitor
-
-    glow # markdown previewer in terminal
-
+    
+    vim
     btop  # replacement of htop/nmon
-    iotop # io monitoring
-    iftop # network monitoring
-
-
-    # system tools
-    sysstat
-    lm_sensors # for `sensors` command
-    ethtool
-    pciutils # lspci
-    usbutils # lsusb
-
     #Fonts
     fira-code
   ];
-
-
-  # changes in each release.
+ # changes in each release.
   home.stateVersion = "24.11";
 
   # Let home Manager install and manage itself.
