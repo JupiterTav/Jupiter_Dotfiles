@@ -106,6 +106,10 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+   
+        powerManagement.enable = true;
+        services.thermald.enable = true;
+        services.tlp.enable = true;
 
   # List services that you want to enable:
 
