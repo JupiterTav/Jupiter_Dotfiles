@@ -37,9 +37,11 @@
     gnupg
 
     nix-output-monitor
-    
+    clang
+    clang-tools
     vim
     btop  # replacement of htop/nmon
+
     #Fonts
     fira-code
   ];
