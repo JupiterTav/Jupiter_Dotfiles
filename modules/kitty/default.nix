@@ -1,4 +1,4 @@
-{pkgs, config, lib, ...}: {
+{pkgs, config, lib, ...}:{
 
 	programs.kitty = {
 		enable = true;
@@ -22,7 +22,7 @@
 			enable_audio_bell = false;
 			confirm_os_window_close = 0;
 	
-			background_opacity = "0.9";
+			background_opacity = "1.0";
 			tab_bar_style = "separator";
 		};
 		shellIntegration.enableZshIntegration = true;

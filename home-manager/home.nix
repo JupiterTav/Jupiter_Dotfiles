@@ -9,17 +9,16 @@
   };
 	imports = [
 		../modules/default.nix
-
-    inputs.nvf.homeManagerModules.default
+      inputs.nvf.homeManagerModules.default
 ];
   home.packages = with pkgs; [
 
-    neofetch
     nnn # terminal file manager
 
     obsidian
     zip
     unzip 
+    nitch
 
     # utils
     ripgrep # recursively searches directories for a regex pattern

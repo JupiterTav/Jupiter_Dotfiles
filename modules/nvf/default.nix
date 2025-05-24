@@ -20,10 +20,10 @@ programs.nvf = {
                 telescope.enable = true;
                 autocomplete.blink-cmp.enable = true;
                 snippets.luasnip.enable = true;
-            
                 languages = {
                     enableLSP = true;
                     enableTreesitter = true;
+                    enableFormat = true;
 
                     nix.enable = true;
                     clang.enable = true;
@@ -31,6 +31,16 @@ programs.nvf = {
                 };
                 lsp = {
                     enable = true;
+                    lspsaga.enable = true;
+                    lspkind.enable = true;
+                    trouble.enable = true;
+                    otter-nvim.enable = true;
+                };
+                debugger = {
+                  nvim-dap = {
+                     enable = true;
+                     ui.enable = true;
+                  };
                 };
                 visuals = {
                     nvim-web-devicons.enable = true;
@@ -42,6 +52,7 @@ programs.nvf = {
                     borders.enable = true;
                     colorizer.enable = true;
                     modes-nvim.enable = true;
+                    fastaction.enable = true;
                 };
 
                 binds = {
@@ -55,7 +66,9 @@ programs.nvf = {
                     gitsigns.enable = true;
                     gitsigns.codeActions.enable = false; 
                 };
+                utility = {
+                       diffview-nvim.enable = true;
             };
         };
     };
-}
+   };}

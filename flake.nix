@@ -7,6 +7,8 @@
 			url = "github:nix-community/home-manager/release-24.11";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+
+      stylix.url = "github:nix-community/stylix/release-24.11";
 		
 
 		nvf = {
@@ -14,23 +16,20 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
         };
-	outputs = {self, nixpkgs, home-manager, nvf, ...}@inputs: {
+	outputs = {self, nixpkgs, home-manager, nvf, stylix, ...}@inputs: {
 	
-#			packages."x86_64-linux".default = (nvf.lib.neovimConfiguration {
- #                       pkgs = nixpkgs.legacyPackages."x86_64-linux";
-  #                      modules = [ ./modules/nvf/default.nix];
-   #             }).neovim;	
                 nixosConfigurations.nixos = nixpkgs.lib.nixosSystem { 
                 
                         system = "x86_64-linux";
                         modules = [
-                                ./nixos/configuration.nix
-                                home-manager.nixosModules.home-manager {	
-                                        	home-manager.useGlobalPkgs = true;
-                                        	home-manager.useUserPackages = true;
+                           stylix.nixosModules.stylix
+                           ./nixos/configuration.nix
+                           home-manager.nixosModules.home-manager {	
+                           	home-manager.useGlobalPkgs = true;
+                             	home-manager.useUserPackages = true;
                                         	home-manager.users.jupiter_euler = import ./home-manager/home.nix;
-						home-manager.extraSpecialArgs = {inherit inputs;};
-                                	}
+		                        				home-manager.extraSpecialArgs = {inherit inputs;};
+                                 }
                         ];
                 };
 	};

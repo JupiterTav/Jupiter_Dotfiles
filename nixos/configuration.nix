@@ -67,7 +67,6 @@
      kitty
      git
      waybar
-     swww
      rofi-wayland
      dunst
      libnotify
