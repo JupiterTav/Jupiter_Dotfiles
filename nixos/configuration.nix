@@ -76,6 +76,7 @@
 
   programs.hyprland = {
 	enable = true;
+      withUWSM = true;
 	xwayland.enable = true;
 	};
    programs.zsh.enable = true;

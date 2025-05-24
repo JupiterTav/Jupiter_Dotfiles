@@ -5,6 +5,7 @@
 		./git
 		./kitty
 		./shell
-                ./nvf
+      ./nvf
+      ./hyprland
 	];
 }
