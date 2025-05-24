@@ -11,7 +11,7 @@
     ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
-
+  home-manager.backupFileExtension = "backup";
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -47,11 +47,13 @@
   # Configure console keymap
   console.keyMap = "br-abnt2";
 
+  users.defaultUserShell = pkgs.zsh;
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jupiter_euler = {
     isNormalUser = true;
     description = "Wesle Tavares";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [];
   };
 
@@ -67,6 +69,7 @@
      kitty
      git
      waybar
+     swww
      rofi-wayland
      dunst
      libnotify
