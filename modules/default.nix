@@ -5,7 +5,8 @@
 		./git
 		./kitty
 		./shell
-      ./nvf
-      ./hyprland
+    ./nvf
+    ./hyprland
+    ./hyprpanel
 	];
 }

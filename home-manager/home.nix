@@ -1,8 +1,8 @@
 { config, pkgs, inputs, ... }:
 
 {
-  home.username = "jupiter_euler";
-  home.homeDirectory = "/home/jupiter_euler";
+  home.username = "euler";
+  home.homeDirectory = "/home/euler";
   xresources.properties = {
     "Xcursor.size" = 16;
     "Xft.dpi" = 172;
@@ -34,6 +34,7 @@
     gawk
     zstd
     gnupg
+    brightnessctl
 
     nix-output-monitor
     clang

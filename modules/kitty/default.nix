@@ -10,7 +10,7 @@
 			"LS_COLORS" = "1";
 		};
 		
-			themeFile = "GruvboxMaterialDarkSoft";
+			themeFile = "GruvboxMaterialDarkMedium";
 		settings = {
 
 			#keyboard latency
@@ -26,5 +26,6 @@
 			tab_bar_style = "separator";
 		};
 		shellIntegration.enableZshIntegration = true;
+    enableGitIntegration = true;
 	};
 }

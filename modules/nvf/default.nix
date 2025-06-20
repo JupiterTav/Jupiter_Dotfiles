@@ -5,8 +5,8 @@ programs.nvf = {
         settings = {
             vim = {
                 options = {
-                    shiftwidth = 3;
-                    tabstop = 3;
+                    shiftwidth = 2;
+                    tabstop = 2;
                 };
                 
                 theme = {
@@ -21,7 +21,6 @@ programs.nvf = {
                 autocomplete.blink-cmp.enable = true;
                 snippets.luasnip.enable = true;
                 languages = {
-                    enableLSP = true;
                     enableTreesitter = true;
                     enableFormat = true;
 

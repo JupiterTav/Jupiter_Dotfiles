@@ -43,15 +43,16 @@
     layout = "br";
     variant = "";
   };
+  services.upower.enable = true;
 
   # Configure console keymap
   console.keyMap = "br-abnt2";
 
   users.defaultUserShell = pkgs.zsh;
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.jupiter_euler = {
+  users.users.euler = {
     isNormalUser = true;
-    description = "Wesle Tavares";
+    description = "Euler";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
     packages = with pkgs; [];
@@ -99,7 +100,7 @@
    };	
 
    fonts.packages = with pkgs; [
-	(nerdfonts.override {fonts = ["FiraCode"];})
+	nerd-fonts.fira-code
 	];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -120,6 +121,6 @@
    services.openssh.enable = true;
 
 
-system.stateVersion = "24.11"; # Did you read the comment?
+system.stateVersion = "25.05"; # Did you read the comment?
 
 }

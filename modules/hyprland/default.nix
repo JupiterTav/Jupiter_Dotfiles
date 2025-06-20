@@ -4,15 +4,14 @@
       systemd.enable = false;
       settings = {
 
-         monitor = ",preferred,auto,auto";
+         monitor = ",preferred,auto,1";
          "$terminal" = "kitty";
          "$fileManager" = "dolphin";
          "$menu" = "wofi --show drun";
 
          exec-once = [ 
-         "bash ~/.config/hypr/start.sh"
+         "./wallpaper.sh"
          "nm-applet &"
-         "waybar"
          ];
 
 
@@ -29,7 +28,7 @@
              gaps_out = 10;
              border_size = 2;
              "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-             "col.inactive_border" = "rgba(595959aa);";
+             "col.inactive_border" = "rgba(595959aa)";
              resize_on_border = false;
              allow_tearing = false;
 
