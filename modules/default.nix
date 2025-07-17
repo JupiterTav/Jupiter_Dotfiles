@@ -8,5 +8,6 @@
     ./nvf
     ./hyprland
     ./hyprpanel
+    ./gaming
 	];
 }

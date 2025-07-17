@@ -57,7 +57,6 @@ programs.nvf = {
                 binds = {
                     whichKey.enable = true;
                     cheatsheet.enable = true;
-                    hardtime-nvim.enable = true;
                 };
 
                 git = {
@@ -67,7 +66,8 @@ programs.nvf = {
                 };
                 utility = {
                        diffview-nvim.enable = true;
+                };
             };
         };
-    };
-   };}
+   };
+}

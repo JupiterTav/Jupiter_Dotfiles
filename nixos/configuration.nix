@@ -44,7 +44,11 @@
     variant = "";
   };
   services.upower.enable = true;
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
 
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = ["euler"];
   # Configure console keymap
   console.keyMap = "br-abnt2";
 
@@ -53,7 +57,7 @@
   users.users.euler = {
     isNormalUser = true;
     description = "Euler";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "gamemode"];
     shell = pkgs.zsh;
     packages = with pkgs; [];
   };
@@ -63,21 +67,33 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+
   environment.systemPackages = with pkgs; [
-     neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-     wget
-     firefox
-     kitty
-     git
-     waybar
-     swww
-     rofi-wayland
-     dunst
-     libnotify
-     networkmanagerapplet
+      neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+      wget
+      firefox
+      kitty
+      git
+      waybar
+      swww
+      rofi-wayland
+      dunst
+      libnotify
+      networkmanagerapplet
+      wineWowPackages.stable
+      winetricks
+      wineWowPackages.waylandFull
+      steam
+      hydralauncher
+      iio-sensor-proxy
+      iio-hyprland
+      rofi-wayland
   ];
+  programs.steam.enable = true;
+  programs.gamemode.enable = true;
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
+  programs.nix-ld.enable = true;
   programs.hyprland = {
 	enable = true;
       withUWSM = true;
@@ -85,7 +101,10 @@
 	};
    programs.zsh.enable = true;
    hardware = {
-        graphics.enable = true;
+      graphics.enable = true;
+      opengl = {
+        enable = true;
+    };
    };
 
    xdg.portal.enable = true;

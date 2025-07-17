@@ -19,7 +19,7 @@
         };
            bar.launcher.autoDetectIcon = true;
            bar.workspaces.show_icons = true;
-
+           bar.autoHide = "yes";
            menus.clock = {
              time = {
                military = false;

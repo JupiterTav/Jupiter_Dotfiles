@@ -35,13 +35,22 @@
     zstd
     gnupg
     brightnessctl
+    nspr
+    raylib
+    hyprsunset
+    pavucontrol
 
+    gnome-boxes
     nix-output-monitor
     clang
     clang-tools
     vim
     btop  # replacement of htop/nmon
-
+    mangohud 
+    lutris
+    protonup-qt 
+    bottles 
+    heroic
     #Fonts
     fira-code
   ];
