@@ -88,6 +88,8 @@
       iio-sensor-proxy
       iio-hyprland
       rofi-wayland
+      kdePackages.dolphin
+    gvfs
   ];
   programs.steam.enable = true;
   programs.gamemode.enable = true;

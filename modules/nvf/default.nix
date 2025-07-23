@@ -18,7 +18,7 @@ programs.nvf = {
                 statusline.lualine.enable = true;
                 autopairs.nvim-autopairs.enable = false;
                 telescope.enable = true;
-                autocomplete.blink-cmp.enable = true;
+                autocomplete.nvim-cmp.enable = true;
                 snippets.luasnip.enable = true;
                 languages = {
                     enableTreesitter = true;
@@ -27,6 +27,8 @@ programs.nvf = {
                     nix.enable = true;
                     clang.enable = true;
                     rust.enable = true;
+                    lua.enable  = true;
+                    lua.lsp.enable = true;
                 };
                 lsp = {
                     enable = true;
